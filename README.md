@@ -1,57 +1,57 @@
 ﻿# DailyManager
 
-Mały desktopowy panel do ogarniania dnia: zadania, kalendarz Google, szybkie linki, notatka i pogoda.
+A small desktop side panel to help you run your day: tasks, Google Calendar, quick links, notes, and weather.
 
-Zrobione w: Electron + Vite + React + TypeScript.
+Built with Electron + Vite + React + TypeScript.
 
-## Jak odpalić lokalnie
+## Run it locally
 
-1. Zainstaluj paczki:
+1. Install dependencies:
 
 ```bash
 npm install
 ```
 
-2. Skopiuj plik env:
+2. Copy the env file:
 
 ```bash
 cp .env.example .env
 ```
 
-3. Uzupełnij w `.env` dane Google OAuth:
+3. Fill your Google OAuth values in `.env`:
 
 - `GOOGLE_CLIENT_ID`
 - `GOOGLE_CLIENT_SECRET`
 
-Opcjonalnie możesz zmienić:
-- `GOOGLE_REDIRECT_PORT` (domyślnie `42813`)
-- `GOOGLE_REDIRECT_URI` (domyślnie `http://localhost:42813`)
+Optional:
+- `GOOGLE_REDIRECT_PORT` (default: `42813`)
+- `GOOGLE_REDIRECT_URI` (default: `http://localhost:42813`)
 
-4. Uruchom apkę:
+4. Start the app:
 
 ```bash
 npm run dev
 ```
 
-## Build instalatora
+## Build installer
 
 ```bash
 npm run build
 ```
 
-Instalator pojawi się w folderze `release/`.
+The installer will be generated in `release/`.
 
-## Ważne
+## Security notes
 
-- `.env` jest lokalny i nie powinien trafiać do repo.
-- Tokeny Google zapisują się lokalnie w `userData/google_tokens.json`.
+- Keep `.env` local (do not commit it).
+- Google OAuth tokens are saved locally in `userData/google_tokens.json`.
 
-## Co już działa
+## Current features
 
-- zegar + data
-- lista zadań (kategorie, priorytety, podzadania)
-- deadline z NLP (np. „jutro 14:00”)
-- integracja z Google Calendar (dodawanie/usuwanie eventów z tasków)
-- notatka dnia
+- live clock + date
+- tasks (categories, priorities, subtasks)
+- natural language deadlines (e.g. "tomorrow 14:00")
+- Google Calendar integration (create/remove events from tasks)
+- daily note
 - quick links
-- tray + autostart
+- tray support + auto start
