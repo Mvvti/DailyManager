@@ -1,42 +1,57 @@
 ﻿# DailyManager
 
-Electron + Vite + React + TypeScript desktop sidebar.
+Mały desktopowy panel do ogarniania dnia: zadania, kalendarz Google, szybkie linki, notatka i pogoda.
 
-## Setup
+Zrobione w: Electron + Vite + React + TypeScript.
 
-1. Install dependencies:
+## Jak odpalić lokalnie
+
+1. Zainstaluj paczki:
 
 ```bash
 npm install
 ```
 
-2. Create `.env` from `.env.example` and set Google OAuth credentials:
+2. Skopiuj plik env:
 
 ```bash
 cp .env.example .env
 ```
 
-Required keys:
+3. Uzupełnij w `.env` dane Google OAuth:
+
 - `GOOGLE_CLIENT_ID`
 - `GOOGLE_CLIENT_SECRET`
 
-Optional:
-- `GOOGLE_REDIRECT_PORT` (default `42813`)
-- `GOOGLE_REDIRECT_URI` (default `http://localhost:<port>`)
+Opcjonalnie możesz zmienić:
+- `GOOGLE_REDIRECT_PORT` (domyślnie `42813`)
+- `GOOGLE_REDIRECT_URI` (domyślnie `http://localhost:42813`)
 
-3. Run app:
+4. Uruchom apkę:
 
 ```bash
 npm run dev
 ```
 
-## Build
+## Build instalatora
 
 ```bash
 npm run build
 ```
 
-## Security
+Instalator pojawi się w folderze `release/`.
 
-- Never commit `.env`.
-- Google OAuth tokens are stored in Electron `userData` (`google_tokens.json`), not in the repository.
+## Ważne
+
+- `.env` jest lokalny i nie powinien trafiać do repo.
+- Tokeny Google zapisują się lokalnie w `userData/google_tokens.json`.
+
+## Co już działa
+
+- zegar + data
+- lista zadań (kategorie, priorytety, podzadania)
+- deadline z NLP (np. „jutro 14:00”)
+- integracja z Google Calendar (dodawanie/usuwanie eventów z tasków)
+- notatka dnia
+- quick links
+- tray + autostart
