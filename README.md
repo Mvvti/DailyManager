@@ -55,3 +55,8 @@ The installer will be generated in `release/`.
 - daily note
 - quick links
 - tray support + auto start
+
+## Screenshots
+
+![Dashboard main view](screenshots/dashboard-1.png)
+![Dashboard calendar and note](screenshots/dashboard-2.png)
