@@ -58,5 +58,9 @@ The installer will be generated in `release/`.
 
 ## Screenshots
 
-![Dashboard main view](screenshots/dashboard-1.png)
-![Dashboard calendar and note](screenshots/dashboard-2.png)
+<p>
+  <img src="screenshots/dashboard-1-redacted.png" alt="Dashboard main view" />
+</p>
+<p>
+  <img src="screenshots/dashboard-2.png" alt="Dashboard calendar and note" />
+</p>
